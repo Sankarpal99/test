@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static files
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "Public")));
 
 // Set the view engine to EJS
 app.set("view engine", "ejs");
@@ -19,7 +19,7 @@ app.set("views", path.join(__dirname, "views"));
 // Use the routes
 app.use("/", userRoutes);
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}/users`);
 });
