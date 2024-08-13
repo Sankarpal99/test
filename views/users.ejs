@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>User List</h1>
+<ul>
+  <% if (users.length > 0) { %>
+    <% users.forEach(user => { %>
+      <li>
+        <div class="user-info">
+          <%= user.name %> (Age: <%= user.age %>)
+        </div>
+        <div class="actions">
+          <form action="/users/<%= user.id %>/delete" method="POST" style="display:inline;">
+            <button type="submit" class="delete">Delete</button>
+          </form>
+          <form action="/users/<%= user.id %>/rename" method="POST" style="display:inline;">
+            <input type="text" name="newName" placeholder="New Name" required>
+            <button type="submit" class="rename">Rename</button>
+          </form>
+        </div>
+      </li>
+    <% }); %>
+  <% } else { %>
+    <li>No users found.</li>
+  <% } %>
+</ul>
+
+<div class="container">
+  <h2>Add New User</h2>
+  <form action="/users" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+    <br>
+    <button type="submit">Add User</button>
+  </form>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* public/css/styles.css */
+
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 20px;
+}
+
+/* Styling for headers */
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+/* Styling for the user list container */
+ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px; /* Constrain the width */
+}
+
+/* Styling for each user item */
+li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for list items */
+li:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the user info part */
+.user-info {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Styling for the actions container */
+.actions {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+/* Style for input field within actions */
+.actions input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 150px;
+}
+
+/* General button styling */
+.actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Specific styling for delete button */
+.actions .delete {
+  background-color: #d9534f;
+  color: white;
+}
+
+/* Specific styling for rename button */
+.actions .rename {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+/* Hover effect for buttons */
+.actions button:hover {
+  opacity: 0.9;
+}
+
+/* Styling for the add new user form container */
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 600px; /* Constrain the width */
+  margin: 20px auto; /* Center the form */
+}
+
+/* Styling for form elements */
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button:hover {
+  background-color: #4cae4c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions input[type="text"],
+  .actions button {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
